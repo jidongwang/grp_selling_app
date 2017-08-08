@@ -34,7 +34,7 @@ exports.invokeRolesPolicies = function () {
     roles: ['seller'],
     allows: [{
       resources: '/api/products',
-      permissions: ['post']
+      permissions: ['get', 'post', 'put', 'delete']
     }, {
       resources: '/api/products/:productId',
       permissions: ['put', 'delete']

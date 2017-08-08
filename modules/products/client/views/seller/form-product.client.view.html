@@ -1,0 +1,45 @@
+﻿<section>
+  <div class="page-header">
+    <h1>{{vm.product._id ? '编辑商品' : '添加商品'}}</h1>
+  </div>
+  <div class="pull-right">
+    <a ng-show="vm.product._id" class="btn btn-primary" ng-click="vm.remove()">
+      <i class="glyphicon glyphicon-trash"></i>
+    </a>
+  </div>
+  <div class="col-md-12">
+    <form name="vm.form.productForm" class="form-horizontal" ng-submit="vm.save(vm.form.productForm.$valid)" novalidate>
+      <fieldset>
+        <div class="form-group" show-errors>
+          <label class="control-label" for="title">商品名称</label>
+          <input name="name" type="text" ng-model="vm.product.name" id="name" class="form-control" placeholder="商品名称" required autofocus>
+          <div ng-messages="vm.form.productForm.title.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Product name is required.</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label" for="content">商品描述</label>
+          <textarea name="description" data-ng-model="vm.product.description" id="description" class="form-control" cols="30" rows="10" placeholder="商品描述"></textarea>
+        </div>
+        <div class="form-group">
+          <label class="control-label" for="content">单价</label>
+          <input name="unitPrice" type="text" ng-model="vm.product.unitPrice" id="unitPrice" class="form-control" placeholder="单价" required>
+          <div ng-messages="vm.form.productForm.unitPrice.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">单价必填</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label" for="content">可销售数量</label>
+
+          <input name="unitsInStock" type="text" ng-model="vm.product.unitsInStock" id="unitsInStock" class="form-control" placeholder="可销售数量">
+          <div ng-messages="vm.form.productForm.unitPrice.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">单价必填</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-default">{{vm.product._id ? '更改' : '添加'}}</button>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</section>
