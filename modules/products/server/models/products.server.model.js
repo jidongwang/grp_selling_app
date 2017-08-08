@@ -33,11 +33,11 @@ var ProductSchema = new Schema({
     type: Number,
     default: 0
   },
-    // unitsInStock: {
-    //    type: Number,
-    //    default: 0,
-    //    min: 0
-    // },
+  unitsInStock: {
+    type: Number,
+    default: 0,
+    min: 0
+  },
     // unitsOnOrder: {
     //    type: Number,
     //    default: 0,

@@ -21,5 +21,12 @@
       state: 'articles.list',
       roles: ['*']
     });
+
+    // add the create item
+    menuService.addSubMenuItem('topbar', 'articles', {
+      title: 'Create Articles',
+      state: 'articles.create',
+      roles: ['seller']
+    });
   }
 }());

@@ -23,6 +23,15 @@
           pageTitle: 'Articles List'
         }
       })
+      .state('articles.create', {
+        url: '',
+        templateUrl: '/modules/articles/client/views/create-article.client.view.html',
+        controller: 'ArticlesListController',
+        controllerAs: 'vm',
+        data: {
+          pageTitle: 'Article New'
+        }
+      })
       .state('articles.view', {
         url: '/:articleId',
         templateUrl: '/modules/articles/client/views/view-article.client.view.html',
