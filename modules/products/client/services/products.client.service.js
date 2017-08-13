@@ -25,15 +25,15 @@
 
     return Product;
 
-    function createOrUpdate(article) {
-      if (article._id) {
-        return article.$update(onSuccess, onError);
+    function createOrUpdate(product) {
+      if (product._id) {
+        return product.$update(onSuccess, onError);
       } else {
-        return article.$save(onSuccess, onError);
+        return product.$save(onSuccess, onError);
       }
 
       // Handle successful response
-      function onSuccess(article) {
+      function onSuccess(product) {
         // Any required internal processing from inside the service, goes here.
       }
 
